@@ -9,7 +9,7 @@ let num = document.querySelector('.num');
 
 // استرجاع المهام المخزنة عند تحميل الصفحة
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
+  
 // تحميل المهام عند تشغيل الصفحة
 function loadTasks() {
   lower.innerHTML = ''; // مسح المهام القديمة قبل التحميل
@@ -18,7 +18,7 @@ function loadTasks() {
     <div class="task flex justify-start items-center w-96 pl-4 relative py-2" data-index="${index}">
       <input onclick="click_ch(${index})" class="hover:cursor-pointer" type="checkbox" ${task.completed ? 'checked' : ''}>
       <p class="par text-sm ml-4 bg-transparent text-[hsl(236,33%,92%)] hover:cursor-pointer ${task.completed ? 'line-through text-gray-500' : ''}">
-      ${task.text}  
+      ${task.text}   
       </p>
       <i onclick="click_x(${index})"
       class="fa-solid fa-x text-[hsl(235,19%,35%)] hover:text-white transition absolute right-11 text-xs cursor-pointer"></i>
