@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Todo app</title>
+  <!-- font awsom -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- font -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+  </style>
+  <!-- tw -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+  <div class="body bg-black w-screen h-screen bg-[url(images/bg-desktop-dark.jpg)] bg-no-repeat bg-contain">
+    <div class="project pt-11  w-[400px] mx-auto flex flex-col justify-start items-center">
+
+      <div class="todo  w-full flex justify-between items-center ">
+        <h2 class="text-white uppercase font-medium text-3xl tracking-[10px]">to do</h2>
+        <i onclick="click_theme()"
+          class="theme fa-brands fa-affiliatetheme text-[hsl(234,39%,85%)] hover:cursor-pointer"></i>
+      </div>
+
+
+
+      <div class="mid relative flex justify-start items-center w-96 py-2 bg-[hsl(235,24%,19%)] pl-2 rounded-md mt-5">
+        <input
+          class="new-todo text-[hsl(236,33%,92%)] w-96 text-sm ml-2 outline-none placeholder:font-light placeholder:text-xs placeholder:tracking-widest"
+          type="text" placeholder="Create a new todo...">
+
+        <i onclick="add_task()"
+          class="check fa-solid fa-check text-[hsl(235,19%,35%)] hover:text-white transition absolute right-4  text-xs cursor-pointer "></i>
+
+      </div>
+
+
+
+      <div class="lower  flex flex-col justify-center items-start w-96  bg-[hsl(235,24%,19%)] rounded-sm mt-7">
+      </div>
+
+      <div
+        class=" statis flex justify-between items-center bg-[hsl(235,24%,19%)]  text-[hsl(236,9%,61%)] w-96 py-2 px-4 text-[11px] rounded-sm">
+        <p class="text-xs transition hover:text-[hsl(220,98%,61%)]"><span class="num mr-1">0</span>items left</p>
+        <div class="flex justify-between">
+          <p class=" hover:text-[hsl(220,98%,61%)] transition cursor-pointer ">All</p>
+          <p class="mx-2 hover:text-[hsl(220,98%,61%)] transition cursor-pointer ">Active</p>
+          <p class="  hover:text-[hsl(220,98%,61%)] transition cursor-pointer">Completed</p>
+        </div>
+        <p class="hover:text-[hsl(220,98%,61%)] transition cursor-pointer">Clear Completed</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
